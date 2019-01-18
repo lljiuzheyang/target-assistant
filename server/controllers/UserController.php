@@ -9,11 +9,13 @@
 namespace app\controllers;
 
 
+use app\helper\ResultHelper;
+
 class UserController extends BaseController
 {
-    public function actionLogin()
+    public function actionLogin($code)
     {
-        return $this->json([]);
+        return $this->json(ResultHelper::generate(ResultHelper::成功,null, $code));
     }
 
 }
