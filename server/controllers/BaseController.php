@@ -3,9 +3,9 @@
 namespace app\controllers;
 
 use yii;
-use holidayhelperbackend\helper\ResultHelper;
+use app\helper\ResultHelper;
 use yii\web\Response;
-use holidayhelperbackend\helper\ParamsHelper;
+use app\helper\ParamsHelper;
 
 /**
  * WEB基础控制器，提供一些基础工具，所有WEB类控制器应该基于此类实现
