@@ -9,7 +9,9 @@
 namespace app\controllers;
 
 
-use service\helper\ServiceContext;
+
+
+use app\service\ServiceContext;
 
 class ServiceController extends BaseController
 {
@@ -38,6 +40,6 @@ class ServiceController extends BaseController
         $this->serviceContext = new ServiceContext();
         $this->serviceContext->serviceName = $this->serviceName;
 
-        \Yii::$container->setSingleton('platform\service\ServiceContext', $this->serviceContext);
+        \Yii::$container->setSingleton('app\service\ServiceContext', $this->serviceContext);
     }
 }
