@@ -232,6 +232,7 @@ class ResultHelper {
     const 必须传入方法名 = 10003;
     const 解析服务调用异常 = 10004;
     const 获取JSON请求数据失败 = 10005;
+    const code转sessionKey异常 = 201;
 //    const TCP连接远程服务器失败 = 20001;
 //    const 向远程服务器发送数据失败 = 20002;
 //    const 接收远程服务器返回数据失败 = 20003;

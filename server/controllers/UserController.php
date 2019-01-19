@@ -10,12 +10,17 @@ namespace app\controllers;
 
 
 use app\helper\ResultHelper;
+use app\service\user\UserService;
 
 class UserController extends BaseController
 {
+
     public function actionLogin($code)
     {
-        return $this->json(ResultHelper::generate(ResultHelper::成功,null, $code));
+        $user = UserService::instance();
+        $data = $user->authorization($code);
+
+        return $this->json($data);
     }
 
 }
