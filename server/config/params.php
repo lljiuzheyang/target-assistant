@@ -4,6 +4,7 @@ return [
     'adminEmail' => 'admin@example.com',
     'wx'=>[
         'appid'=>'Myappid',
-        'appsecret'=>'Myappsecret'
+        'appsecret'=>'Myappsecret',
+        'cryptkey'=>'crypt_key'
     ]
 ];

@@ -16,7 +16,7 @@ class CryptHelper
     // 加密
     public static function encrypt($input)
     {
-        $cihperRaw = openssl_encrypt($input, self::CIPHER_MODE, config('platform.crypt_key'), OPENSSL_RAW_DATA);
+        $cihperRaw = openssl_encrypt($input, self::CIPHER_MODE, \Yii::$app->params['wx']['cryptkey'], OPENSSL_RAW_DATA);
         return base64_encode($cihperRaw);
     }
 
@@ -24,7 +24,7 @@ class CryptHelper
     public static function decrypt($cipherText)
     {
         $chiperRaw = base64_decode($cipherText);
-        $content   = openssl_decrypt($chiperRaw, self::CIPHER_MODE, config('platform.crypt_key'), OPENSSL_RAW_DATA);
+        $content   = openssl_decrypt($chiperRaw, self::CIPHER_MODE, \Yii::$app->params['wx']['cryptkey'], OPENSSL_RAW_DATA);
         return $content;
     }
 }
